@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archiwum Zakazanych Praktyk - Operacja Wisła</title>
+    <style>
+        body {
+            background-color: #0c0a08;
+            color: #d1c7bd;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 700px;
+            width: 100%;
+            background: radial-gradient(circle, #221a14 0%, #130f0b 100%);
+            border: 2px solid #3a2f24;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px double #4a1111;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #8b1e1e;
+            font-size: 24px;
+            letter-spacing: 2px;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+        }
+
+        .warning {
+            color: #d63030;
+            font-size: 13px;
+            font-weight: bold;
+            background: rgba(139, 30, 30, 0.1);
+            padding: 10px;
+            border: 1px dashed #8b1e1e;
+            margin-top: 15px;
+        }
+
+        .step {
+            display: none;
+        }
+
+        .step.active {
+            display: block;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 15px;
+            text-align: justify;
+        }
+
+        .task-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 3px solid #4a3a2c;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .task-box.accent {
+            border-left-color: #8b1e1e;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px 0;
+            font-size: 14px;
+            color: #a89f96;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            background: #191410;
+            border: 1px solid #4a3a2c;
+            color: #fff;
+            font-family: inherit;
+            font-size: 16px;
+            box-sizing: border-box;
+            border-radius: 3px;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #8b1e1e;
+            box-shadow: 0 0 5px rgba(139, 30, 30, 0.5);
+        }
+
+        button {
+            background: #5c1414;
+            color: #fff;
+            border: 1px solid #3d0d0d;
+            padding: 12px 25px;
+            font-family: inherit;
+            font-size: 15px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 25px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #8b1e1e;
+        }
+
+        .error-msg {
+            color: #ff4747;
+            font-size: 14px;
+            margin-top: 15px;
+            text-align: center;
+            min-height: 20px;
+            font-weight: bold;
+        }
+
+        .success-box {
+            color: #47ff75;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Ministerstwo Magii</h1>
+        <div style="font-size: 12px; color: #8a7b6e; letter-spacing: 1px;">DEPARTAMENT PRZESTRZEGANIA PRAWA CZARODZIEJÓW</div>
+        <div class="warning">
+            ⚠️ MATERIAŁY CZĘŚCIOWO USZKODZONE PRZEZ MAGIĘ<br>
+            <span style="font-size: 11px; color: #a89f96; font-weight: normal;">Dokument udostępniony uczniom Magicznej Przystani za zgodą Dyrekcji.</span>
+        </div>
+    </div>
+
+    <!-- ETAP 1 -->
+    <div id="step1" class="step active">
+        <h3 style="color: #bc986c; margin-top: 0;">STRONA 1: Brytyjski List Gończy (Zablokowany)</h3>
+        <p><strong>KOD OPERACYJNY: ZBIEG 77 (BARTEMIUSZ CZARNY)</strong></p>
+        <p>Poszukiwany Śmierciożerca zbiegł z obławy w Szkocji i kieruje się na wschód Europy. Przed ucieczką zabezpieczył swoje akta potężnym zaklinaniem runicznym. Rejestr jego zbrodni kryje klucz do złamania blokady. Podaj nazwy lub inkantacje trzech Zaklęć Niewybaczalnych:</p>
+        
+        <div class="task-box">
+            <label>Klątwa I: Wywołuje niewyobrażalny, rozrywający ból całego ciała w celu tortur.</label>
+            <input type="text" id="spell1" placeholder="Wpisz nazwę lub formułę...">
+
+            <label>Klątwa II: Całkowicie odbiera ofierze wolną wolę, dając pełną kontrolę rzucającemu.</label>
+            <input type="text" id="spell2" placeholder="Wpisz nazwę lub formułę...">
+
+            <label>Klątwa III: Jaskrawozielony snop światła niosący natychmiastową śmierć.</label>
+            <input type="text" id="spell3" placeholder="Wpisz nazwę lub formułę...">
+        </div>
+        
+        <button onclick="checkStep1()">Złam Zabezpieczenia</button>
+        <div id="error1" class="error-msg"></div>
+    </div>
+
+    <!-- ETAP 2 -->
+    <div id="step2" class="step">
+        <h3 style="color: #bc986c; margin-top: 0;">STRONA 2: Raport z Polskiej Obławy (Podlasie)</h3>
+        <p><em>Mroczna aura pęka! Pergamin zmienia treść, ukazując pieczęcie polskiego Departamentu Tajemnic i chaotyczne notatki zbiega. Brytyjski czarnoksiężnik zderzył się z rdzenną magią naszych ziem i uciekł w popłochu. Zidentyfikuj trzy słowiańskie demony, które doprowadziły go do obłędu:</em></p>
+        
+        <div class="task-box accent">
+            <label>Incydent 1 (Las): "Wkroczyłem w puszczę. Ścieżki znikały. Wielka, brodata istota, zmieniająca wzrost od kępki trawy do koron drzew, wodziła mnie za nos i ryczała śmiechem..."</label>
+            <input type="text" id="demon1" placeholder="Jak brzmi nazwa tego demona?">
+
+            <label>Incydent 2 (Pole): "Dokładnie o godzinie 12:00 w pełnym słońcu na polu dopadła mnie blada kobieta w bieli, rodząca się z wiru pyłowego. Głowa o mało mi nie pękła..."</label>
+            <input type="text" id="demon2" placeholder="Jak brzmi nazwa tego demona?">
+
+            <label>Incydent 3 (Nocleg): "Zasnąłem w chacie. Nagle poczułem potworny ciężar na klatce piersiowej. Coś niewidzialnego odebrało mi głos, sparaliżowało ciało i zaczęło dusić..."</label>
+            <input type="text" id="demon3" placeholder="Jak brzmi nazwa tego demona?">
+        </div>
+
+        <button onclick="checkStep2()">Prześlij Raport Końcowy</button>
+        <div id="error2" class="error-msg"></div>
+    </div>
+
+    <!-- FINAŁ -->
+    <div id="step3" class="step">
+        <div class="success-box">
+            <h2 style="color: #47ff75; margin-top: 0;">🏆 OPERACJA ZAKOŃCZONA SUKCESEM!</h2>
+            <p>Zabezpieczenia zostały całkowicie zneutralizowane, a śledztwo zamknięte!</p>
+            <p style="text-align: center; border: 1px solid #47ff75; padding: 15px; background: rgba(71, 255, 117, 0.05);">
+                Potężny brytyjski czarnoksiężnik uciekł z Europy Wschodniej z płaczem, po tym jak dostał solidną lekcję pokory od <strong>Leszego</strong>, <strong>Południcy</strong> i <strong>Zmory</strong>. Nasza lokalna, słowiańska magia udowodniła swoją absolutną wyższość.
+            </p>
+            <p style="color: #bc986c; font-size: 14px; margin-top: 25px;">Raport trafił do rąk Dyrekcji Magicznej Przystani. Gratulacje, Aurorze!</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function normalize(str) {
+        return str.toLowerCase().trim().replace(/ą/g, 'a').replace(/ć/g, 'c').replace(/ę/g, 'e').replace(/ł/g, 'l').replace(/ń/g, 'n').replace(/ó/g, 'o').replace(/ś/g, 's').replace(/ź/g, 'z').replace(/ż/g, 'z');
+    }
+
+    function checkStep1() {
+        var s1 = normalize(document.getElementById('spell1').value);
+        var s2 = normalize(document.getElementById('spell2').value);
+        var s3 = normalize(document.getElementById('spell3').value);
+
+        var isCorrect1 = (s1 === 'cruciatus' || s1 === 'crucio');
+        var isCorrect2 = (s2 === 'imperius' || s2 === 'imperio');
+        var isCorrect3 = (s3 === 'avada kedavra' || s3 === 'avada');
+
+        if (isCorrect1 && isCorrect2 && isCorrect3) {
+            document.getElementById('step1').classList.remove('active');
+            document.getElementById('step2').classList.add('active');
+        } else {
+            document.getElementById('error1').innerText = "❌ Pieczęć nie drgnęła. Jedno lub więcej zaklęć zostało błędnie zidentyfikowanych.";
+        }
+    }
+
+    function checkStep2() {
+        var d1 = normalize(document.getElementById('demon1').value);
+        var d2 = normalize(document.getElementById('demon2').value);
+        var d3 = normalize(document.getElementById('demon3').value);
+
+        var isCorrectD1 = (d1 === 'leszy' || d1 === 'borowy');
+        var isCorrectD2 = (d2 === 'poludnica');
+        var isCorrectD3 = (d3 === 'zmora' || d3 === 'mora');
+
+        if (isCorrectD1 && isCorrectD2 && isCorrectD3) {
+            document.getElementById('step2').classList.remove('active');
+            document.getElementById('step3').classList.add('active');
+        } else {
+            document.getElementById('error2').innerText = "❌ Błąd w raporcie! Polskie demony wciąż mącą w dokumentacji. Sprawdź odpowiedzi.";
+        }
+    }
+</script>
+
+</body>
+</html>
